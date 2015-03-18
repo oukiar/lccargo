@@ -3,7 +3,6 @@ var express = require('express');
 var parseExpressCookieSession = require('parse-express-cookie-session');
 var parseExpressHttpsRedirect = require('parse-express-https-redirect');
 var app = express();
-
 var routes = require('cloud/routes');
 
 // Global app configuration section
@@ -26,6 +25,9 @@ app.use(parseExpressCookieSession({
 app.get('/', routes.login);
 app.get('/login', routes.login);
 app.post('/logins', routes.logins);
+app.get('/settings', routes.Settings);
+//To create a Staff Member
+app.post('/createStaff', routes.createStaff);
 app.post('/client_registration', routes.clientReg);
 app.post('/addClient', routes.addClient);
 app.get('/clientSuccess', routes.clientSuccess);
@@ -48,6 +50,5 @@ app.get('/labelsTable', routes.labelsTable);
 app.get('/newLabel', routes.newLabel);
 app.get('/trip/:tripId', routes.tripInfo);
 app.get('*', routes.clientProfile);
-
 
 app.listen();
