@@ -40,7 +40,9 @@ app.get('/reserveHotel', routes.reserveHotel);
 app.post('/reserveHotel', routes.reservation);
 //See clients reservations
 app.get('/reservations', routes.reservations);
+app.post('/reservations', routes.reservationspost);
 app.get('/clients', routes.clients);
+app.post('/clients', routes.clientspost);
 app.get('/mainclients', routes.mainclients);
 app.post('/mainclients', routes.mainclientspost);
 //Show client's reservation in his profile
