@@ -49,6 +49,7 @@ app.get('/labels', routes.labels);
 app.get('/labelsTable', routes.labelsTable);
 app.get('/newLabel', routes.newLabel);
 app.get('/trip/:tripId', routes.tripInfo);
+app.get('/staff/:staffId', routes.staffInfo);
 app.get('*', routes.clientProfile);
 
 app.listen();
