@@ -57,7 +57,7 @@ app.get('/trip/:tripId', routes.tripInfo);
 app.get('/staff/:staffId', routes.staffInfo);
 app.get('*', routes.clientProfile);
 
-//
-app.post('warehouse', routes.warehousepost);
+//autofill request
+app.post('/warehouse', routes.warehousepost);
 
 app.listen();
