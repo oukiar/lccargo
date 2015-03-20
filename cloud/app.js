@@ -28,7 +28,10 @@ app.post('/logins', routes.logins);
 app.get('/settings', routes.Settings);
 //To create a Staff Member
 app.post('/createStaff', routes.createStaff);
+//Client registration POST
 app.post('/client_registration', routes.clientReg);
+//agency registration POST
+app.post('/agency_registration', routes.agencyReg);
 app.post('/addClient', routes.addClient);
 app.get('/clientSuccess', routes.clientSuccess);
 app.get('/signup', routes.signup);
