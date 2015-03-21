@@ -48,6 +48,10 @@ app.get('/clients', routes.clients);
 app.post('/clients', routes.clientspost);
 app.get('/mainclients', routes.mainclients);
 app.post('/mainclients', routes.mainclientspost);
+//agency section
+app.get('/agencies', routes.mainAgencies);
+app.get('/pagencies', routes.pendingAgencies);
+app.get('/agency/:agencyId', routes.agencyProfile)
 //Show client's reservation in his profile
 app.get('/cl_reserv/:clientID', routes.reserv);
 app.get('/labels', routes.labels);
