@@ -86,6 +86,7 @@ app.get('*', routes.clientProfile);
 
 //autofill request
 app.post('/warehouse', routes.warehousepost);
+app.post('/addwarehouse', routes.addwarehousepost);
 app.post('/client_autofill', routes.client_autofill);
 
 app.listen();
