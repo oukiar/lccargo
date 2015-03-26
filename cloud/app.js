@@ -76,17 +76,23 @@ app.get('/agencies', routes.mainAgencies);
 app.get('/pagencies', routes.pendingAgencies);
 //visit agency profile
 app.get('/agency/:agencyId', routes.agencyProfile)
-
+//WAREHOUSE SECTION
+//new label
 app.get('/labels', routes.labels);
+//autofill request
+app.post('/warehouse', routes.warehousepost);
+//See client warehouse
+app.get('/clientsWareHouse/:clientID', routes.clientsWareHouse);
+app.post('/client_autofill', routes.client_autofill);
+//save new warehouse label
+app.post('/addwarehouse', routes.addwarehousepost);
+//warehouse receipts table
 app.get('/labelsTable', routes.labelsTable);
+//open label in a new window
 app.get('/newLabel', routes.newLabel);
-
 app.get('/staff/:staffId', routes.staffInfo);
 app.get('*', routes.clientProfile);
 
-//autofill request
-app.post('/warehouse', routes.warehousepost);
-app.post('/addwarehouse', routes.addwarehousepost);
-app.post('/client_autofill', routes.client_autofill);
+
 
 app.listen();
