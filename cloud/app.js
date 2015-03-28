@@ -83,6 +83,7 @@ app.get('/labels', routes.labels);
 app.post('/warehouse', routes.warehousepost);
 //See client warehouse
 app.get('/clientsWareHouse/:clientID', routes.clientsWareHouse);
+app.get('/ag_warehouse/:agencyID', routes.agencyWareHouse);
 app.post('/client_autofill', routes.client_autofill);
 //save new warehouse label
 app.post('/addwarehouse', routes.addwarehousepost);
@@ -92,7 +93,5 @@ app.get('/labelsTable', routes.labelsTable);
 app.get('/newLabel', routes.newLabel);
 app.get('/staff/:staffId', routes.staffInfo);
 app.get('*', routes.clientProfile);
-
-
 
 app.listen();
