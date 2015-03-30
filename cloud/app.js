@@ -51,7 +51,7 @@ app.get('/reserveHotel', routes.reserveHotel);
 //reserve Trip
 app.post('/reserveHotel', routes.reservation);
 //Show clients warehouse in their clients Profile
-app.get('/cl_warehouse', routes.cl_Warehouse);
+app.post('/cl_warehouse', routes.cl_Warehouse);
 
 //----STAFF SECTION---
 //To create a Staff Member
@@ -72,6 +72,7 @@ app.post('/reservations', routes.reservationspost);
 app.get('/trip/:tripId', routes.tripInfo);
 //Show specific client's reservations in his profile
 app.get('/cl_reserv/:clientID', routes.reserv);
+app.post('/cl_reserv', routes.reservpost);
 //active agencies table
 app.get('/agencies', routes.mainAgencies);
 //pending agencies table
@@ -91,6 +92,7 @@ app.post('/client_autofill', routes.client_autofill);
 app.post('/addwarehouse', routes.addwarehousepost);
 //warehouse receipts table
 app.get('/labelsTable', routes.labelsTable);
+app.post('/labelsFilter', routes.labelsFilter);
 //open label in a new window
 app.get('/newLabel', routes.newLabel);
 app.get('/staff/:staffId', routes.staffInfo);
