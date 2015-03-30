@@ -50,6 +50,8 @@ app.post('/client_registration', routes.clientReg);
 app.get('/reserveHotel', routes.reserveHotel);
 //reserve Trip
 app.post('/reserveHotel', routes.reservation);
+//Show clients warehouse in their clients Profile
+app.get('/cl_warehouse', routes.cl_Warehouse);
 
 //----STAFF SECTION---
 //To create a Staff Member
