@@ -40,6 +40,9 @@ app.get('/profile', routes.profile);
 //---AGENCIES SECTION---
 //agency registration POST
 app.post('/agency_registration', routes.agencyReg);
+app.post('/addAgency', routes.addAgency);
+//Show agency warehouse in their agegencies Profile
+app.get('/ag_labels', routes.ag_labels);
 
 //----CLIENTS SECTION---
 app.post('/addClient', routes.addClient);
@@ -51,7 +54,9 @@ app.get('/reserveHotel', routes.reserveHotel);
 //reserve Trip
 app.post('/reserveHotel', routes.reservation);
 //Show clients warehouse in their clients Profile
-app.post('/cl_warehouse', routes.cl_Warehouse);
+app.get('/cl_warehouse', routes.cl_warehouse);
+//Filter for clients warehouse view from Staff session
+app.post('/postClientwarehouseStaff', routes.postClientsWarehouseStaff );
 
 //----STAFF SECTION---
 //To create a Staff Member
@@ -70,6 +75,8 @@ app.get('/reservations', routes.reservations);
 app.post('/reservations', routes.reservationspost);
 //Displays full trip reservation
 app.get('/trip/:tripId', routes.tripInfo);
+//View trip from Client's profile
+app.get('/cl_trip/:tripId', routes.cl_tripInfo);
 //Show specific client's reservations in his profile
 app.get('/cl_reserv/:clientID', routes.reserv);
 app.post('/cl_reserv', routes.reservpost);
