@@ -65,3 +65,4 @@ Parse.Cloud.define("rReservation", function(request, response) {
 		   			  }
 		                });
 		              });
+					  

@@ -34,6 +34,8 @@ app.post('/logins', routes.logins);
 app.get('/signup', routes.signup);
 app.get('/logout', routes.logout);
 app.get('/settings', routes.Settings);
+//delete Staff
+//app.get('/deleteStaff:staffId', routes.deleteStaff);
 //directs to the corresponding profile -STAFF-CLIENT -AGENCY
 app.get('/profile', routes.profile);
 
