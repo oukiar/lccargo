@@ -10,6 +10,8 @@ var parseExpressHttpsRedirect = require('parse-express-https-redirect');
 var app = express();
 var routes = require('cloud/routes');
 
+var moment = require('cloud/moment.js');
+
 // Global app configuration section
 app.set('views', 'cloud/views'); // Specify the folder to find templates
 app.set('view engine', 'ejs');  // Set the template engine
