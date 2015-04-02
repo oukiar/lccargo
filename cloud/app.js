@@ -47,7 +47,6 @@ app.post('/agency_registration', routes.agencyReg);
 app.post('/addAgency', routes.addAgency);
 //Show agency warehouse in their agegencies Profile
 app.get('/ag_labels', routes.ag_labels);
-
 //----CLIENTS SECTION---
 app.post('/addClient', routes.addClient);
 app.get('/clientSuccess', routes.clientSuccess);
@@ -93,6 +92,9 @@ app.get('/agency/:agencyId', routes.agencyProfile)
 //WAREHOUSE SECTION
 //new label
 app.get('/labels', routes.labels);
+app.get('/viewLabel/:labelId', routes.viewLabel);
+//--Create consolidate
+app.get('/createConsolidate', routes.createConsolidate);
 //autofill request
 app.post('/warehouse', routes.warehousepost);
 //See client warehouse
