@@ -10,7 +10,6 @@ var parseExpressHttpsRedirect = require('parse-express-https-redirect');
 var app = express();
 var routes = require('cloud/routes');
 
-var moment = require('cloud/moment.js');
 
 // Global app configuration section
 app.set('views', 'cloud/views'); // Specify the folder to find templates
@@ -95,6 +94,7 @@ app.get('/labels', routes.labels);
 app.get('/viewLabel/:labelId', routes.viewLabel);
 //--Create consolidate
 app.get('/createConsolidate', routes.createConsolidate);
+app.get('/wareConsolidate', routes.wareConsolidate);
 //autofill request
 app.post('/warehouse', routes.warehousepost);
 //See client warehouse
@@ -107,7 +107,7 @@ app.post('/addwarehouse', routes.addwarehousepost);
 app.get('/labelsTable', routes.labelsTable);
 app.post('/labelsFilter', routes.labelsFilter);
 //open label in a new window
-app.get('/newLabel', routes.newLabel);
+app.get('/newLabel/:myparam', routes.newLabel);
 app.get('/staff/:staffId', routes.staffInfo);
 app.get('*', routes.clientProfile);
 
