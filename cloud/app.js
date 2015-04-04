@@ -94,7 +94,12 @@ app.get('/labels', routes.labels);
 app.get('/viewLabel/:labelId', routes.viewLabel);
 //--Create consolidate
 app.get('/createConsolidate', routes.createConsolidate);
-app.get('/wareConsolidate', routes.wareConsolidate);
+
+//PASAR EL PARAMETRO PROVOCA INTERNAL SERVER ERROR, IGNORO PORQUE NO ENCUENTRO EL PROBLEMA
+app.get('/wareConsolidate/:myparam', routes.wareConsolidate);
+app.post('/addconsolidation', routes.addconsolidation);
+//app.get('/wareConsolidate', routes.wareConsolidate);
+
 //autofill request
 app.post('/warehouse', routes.warehousepost);
 //See client warehouse
@@ -107,7 +112,7 @@ app.post('/addwarehouse', routes.addwarehousepost);
 app.get('/labelsTable', routes.labelsTable);
 app.post('/labelsFilter', routes.labelsFilter);
 //open label in a new window
-app.get('/newLabel/:myparam', routes.newLabel);
+app.get('/newLabel', routes.newLabel);
 app.get('/staff/:staffId', routes.staffInfo);
 app.get('*', routes.clientProfile);
 
